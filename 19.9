@@ -1,0 +1,48 @@
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("first one: ");
+        String fo = scan.next();
+        System.out.println("second one: ");
+        String so = scan.next();
+        System.out.println("third one: ");
+        String to = scan.next();
+        if (fo.compareTo(so) < 0 && so.compareTo(to) < 0)
+        {
+            System.out.println(fo);
+            System.out.println(so);
+            System.out.println(to);
+        }
+        else if (fo.compareTo(to) < 0 && to.compareTo(so) < 0)
+        {
+            System.out.println(fo);
+            System.out.println(to);
+            System.out.println(so);
+        }
+        else if (so.compareTo(fo) < 0 && fo.compareTo(to) < 0)
+        {
+            System.out.println(so);
+            System.out.println(fo);
+            System.out.println(to);
+        }
+        else if (so.compareTo(to) < 0 && to.compareTo(fo) < 0)
+        {
+            System.out.println(so);
+            System.out.println(to);
+            System.out.println(fo);
+        }
+        else if (to.compareTo(fo) < 0 && fo.compareTo(so) < 0)
+        {
+            System.out.println(to);
+            System.out.println(fo);
+            System.out.println(so);
+        }
+        else if (to.compareTo(so) < 0 && so.compareTo(fo) < 0)
+        {
+            System.out.println(to);
+            System.out.println(so);
+            System.out.println(to);
+        }
+    }
+}
