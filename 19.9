@@ -1,3 +1,5 @@
+exercise 1:
+
 import java.util.Scanner;
 class HelloWorld {
     public static void main(String[] args) {
@@ -43,6 +45,104 @@ class HelloWorld {
             System.out.println(to);
             System.out.println(so);
             System.out.println(to);
+        }
+    }
+}
+
+
+exercise 2:
+
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("enter a sentence");
+        String sen = scan.nextLine();
+        int size = sen.length();
+        System.out.println(size);
+    }
+}
+
+exercise 3:
+
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("enter a string: ");
+        String str = scan.nextLine();
+        if (str.charAt(0) == str.charAt(2))
+        {
+            System.out.println("True");
+        }
+        else 
+        {
+            System.out.println("False");
+        }
+    }
+}
+
+exercise 4:
+
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("enter a string: ");
+        String str = scan.nextLine();
+        System.out.print(str.charAt(2));
+        System.out.print(str.charAt(1));
+        System.out.print(str.charAt(0));
+    }
+}
+
+exercise 5:
+
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("enter a string: ");
+        String str = scan.nextLine();
+        str = str.replace("a", "*");
+        str = str.replace("i", "*");
+        str = str.replace("u", "*");
+        str = str.replace("e", "*");
+        str = str.replace("o", "*");
+        System.out.println(str);
+    }
+}
+
+exercise 6:
+
+import java.util.Random;
+class HelloWorld {
+    public static void main(String[] args) {
+        Random r = new Random();
+        int num = r.nextInt(100);
+        System.out.println(num);
+        if (num >= 10 && num <= 99)
+        {
+            System.out.println("two digit number");
+        }
+        else {
+            System.out.println("one digit number");
+        }
+        if (num % 2 == 0) 
+        {
+            System.out.println("divide by 2");
+        }
+        else
+        {
+            System.out.println("not divide by 2");
+        }
+        if (num % 3 == 0)
+        {
+            System.out.println("divide by 3");
+        }
+        else
+        {
+            System.out.println("not divide by 3");
         }
     }
 }
