@@ -1,0 +1,134 @@
+ex 1:
+
+class HelloWorld {
+    public static void HELLO() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("enter your name: ");
+        String name = scan.nextLine();
+        System.out.println("Hello " + name);
+    }
+    
+    public static void main(String[] args) {
+        HELLO();
+    }
+}
+
+ex 2:
+
+import java.util.Scanner;
+class HelloWorld {
+    public static void DivideBy5(int number) {
+        int count = 0;
+        for (int i = 1; i <= number; i++) 
+        {
+            if (i % 5 == 0) 
+            {
+                count++;
+            }
+        }
+        System.out.println("The numbers divisible by 5 from 1 to the number " + number + " are: " + count);
+    }
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        DivideBy5(number);
+    }
+}
+
+ex 3:
+
+class HelloWorld {
+    public static int DOUBLE(int a, int b) {
+        return a * b;
+    }
+
+    public static void main(String[] args) {
+        int num1 = 5;
+        int num2 = 7;
+        int result = DOUBLE(num1, num2);
+        System.out.println("The result of multiplying the numbers " + num1 + " and " + num2 + " is " + result );
+    }
+
+ex 4:
+
+class HelloWorld {
+    public static double DOUBLE(int num1, int num2, int num3) {
+        int sum = num1 + num2 + num3;
+        System.out.println("The sum of the numbers is: " + sum);
+        double average = (num1 + num2 + num3) / 3.0;
+        return average;
+    }
+
+    public static void main(String[] args) {
+        int num1 = 5;
+        int num2 = 7;
+        int num3 = 3;
+        double average = DOUBLE(num1, num2, num3);
+        System.out.println("The average of the numbers is: " + average);
+    }
+}
+
+ex 5:
+
+class HelloWorld {
+    public static void CIRCLE(double radius) {
+        double circumference = 2 * Math.PI * radius;
+        double area = Math.PI * Math.pow(radius, 2);
+        System.out.println("the circumference is: " + circumference);
+        System.out.println("the area is: " + area);
+    }
+    
+    public static void main(String[] args) {
+        double radius = 8.0;
+        CIRCLE(radius);
+    }
+}
+
+ex 6:
+
+class HelloWorld {
+    public static double SIDE3(double a, double b) {
+        double c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+        return c;
+    }
+    public static void main(String[] args) {
+        double a = 6.0;
+        double b = 5.0;
+        double c = SIDE3(a, b);
+        System.out.println(c);
+    }
+}
+
+ex 7:
+
+class HelloWorld {
+    public static void reversed(String word) {
+        char first = word.charAt(2);
+        char second = word.charAt(1);
+        char third = word.charAt(0);
+        System.out.println("" + first + second + third);
+    }
+    public static void main(String[] args) {
+        String word = "nir";
+        reversed(word);
+    }
+}
+
+ex 8:
+
+class HelloWorld {
+    public static int series(int a1, int d, int n) {
+        int An = a1+(n - 1)*d;
+        return An;
+    }
+    
+    public static void main(String[] args) {
+        int a1 = 3;
+        int d = 2;
+        int n = 5;
+        int An = series(a1, d, n);
+        System.out.println(An);
+    }
+}
