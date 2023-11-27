@@ -1,5 +1,6 @@
 ex 1:
 
+import java.util.Scanner;
 class HelloWorld {
     public static void HELLO() {
         Scanner scan = new Scanner(System.in);
@@ -40,12 +41,12 @@ class HelloWorld {
 ex 3:
 
 class HelloWorld {
-    public static int DOUBLE(int a, int b) {
-        return a * b;
+    public static int multiply(int num1, int num2) {
+        return num1 * num2;
     }
 
     public static void main(String[] args) {
-        int num1 = 5;
+        int num1 = 3;
         int num2 = 7;
         int result = DOUBLE(num1, num2);
         System.out.println("The result of multiplying the numbers " + num1 + " and " + num2 + " is " + result );
