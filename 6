@@ -1,0 +1,249 @@
+ex 1:
+
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void AVG() {
+        Scanner sc = new Scanner(System.in);
+        int sum = 0;
+        for (int i = 0; i < 5; i++)
+        {
+            System.out.println("Enter a grade");
+            sum += sc.nextInt();
+        }
+        System.out.println(sum/5);
+    }
+    public static void main(String[] args) {
+        AVG();
+    }
+}
+
+ex 2:
+
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void ENTER() {
+        Scanner sc = new Scanner(System.in);
+        int count = 0;
+        String str = "";
+        while (!str.equals("enter"))
+        {
+            count += 1;
+            System.out.println("enter a word");
+            str = sc.nextLine();
+        }
+        System.out.println(count);
+    }
+    public static void main(String[] args) {
+        ENTER();
+    }
+}
+
+ex 3:
+
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void ENTER(int code) {
+        Scanner sc = new Scanner(System.in);
+        int count = 0;
+        while (code > 9999 || code < 1000 && count < 2)
+        {
+            System.out.println("Error, please try again");
+            code = sc.nextInt();
+            count++;
+        }
+        if (code < 10000 && code > 999)
+        {
+            System.out.println("How much money");
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a 4 digit number");
+        int code = sc.nextInt();
+        ENTER(code);
+    }
+}
+
+ex 4:
+
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void Palindrome(String str) {
+        String str2 = "";
+        for (int i = str.length() - 1; i >= 0; i--)
+        {
+            str2 += str.charAt(i);
+        }
+        if (str.equals(str2))
+        {
+            System.out.println(true);
+        }
+        else
+        {
+            System.out.println(false);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a word");
+        String str = sc.nextLine();
+        Palindrome(str);
+    }
+}
+
+5:
+
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void ex5(int num) {
+        for (int i = 1; i < num; i++)
+        {
+            if (num%i == 0)
+            {
+                System.out.print(i + ", ");
+            }
+        }
+        System.out.println(num);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a number");
+        int num = sc.nextInt();
+        ex5(num);
+    }
+}
+
+ex 6:
+
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void multiplicationTable() {
+        for (int i = 1; i < 11; i++)
+        {
+            for (int j = 1; j < 11; j++)
+            {
+                System.out.print(i*j + "\t");
+            }
+            System.out.print("\n");
+        }
+    }
+    public static void main(String[] args) {
+        multiplicationTable();
+    }
+}
+
+ex 7:
+
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void minMax() {
+        Scanner sc = new Scanner(System.in);
+        int min = 0, max = 0;
+        for (int i = 0; i < 7; i++)
+        {
+            System.out.println("enter a grade");
+            int grade = sc.nextInt();
+            if (i == 0)
+            {
+                min = grade;
+            }
+            if (grade > max)
+            {
+                max = grade;
+            }
+            if (grade < min)
+            {
+                min = grade;
+            }
+        }
+        System.out.println("max: " + max + ", min: " + min);
+    }
+    public static void main(String[] args) {
+        minMax();
+    }
+}
+
+ex 8:
+
+import java.util.Scanner;
+
+class HelloWorld {
+    public static boolean fibonacciSequence(int num) {
+        int num2 = 1, num3 = 1, num4 = num2 + num3;
+        while (num2 <= num)
+        {
+            if (num2 == num)
+            {
+                return true;
+            }
+            num2 = num3;
+            num3 = num4;
+            num4 = num2 + num3;
+        }
+        return false;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a number");
+        int num = sc.nextInt();
+        System.out.println(fibonacciSequence(num));
+    }
+}
+
+ex 9:
+
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void multiply(int num1, int num2) {
+        int sum = 0;
+        for (int i = 0; i < num2; i++)
+        {
+            sum += num1;
+        }
+        System.out.println(sum);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a number");
+        int num1 = sc.nextInt();
+        System.out.println("enter a number");
+        int num2 = sc.nextInt();
+        multiply(num1, num2);
+    }
+}
+
+ex 10:
+
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void triangle(int h) {
+        Scanner sc = new Scanner(System.in);
+        while (h % 2 == 0)
+        {
+            System.out.println("enter an odd number");
+            h = sc.nextInt();
+        }
+        int space = h * 2 - 2;
+        for (int i = 1; i <= h; i++)
+        {
+            System.out.print(" ".repeat(space));
+            System.out.print("* ".repeat(i*2 - 1) + "\n");
+            space -= 2;
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter an odd number");
+        int h = sc.nextInt();
+        triangle(h);
+    }
+}
